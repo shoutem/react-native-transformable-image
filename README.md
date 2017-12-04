@@ -6,11 +6,11 @@ A pure JavaScript written transformable image component, like PhotoView or Image
 
 
 
-Written in pure JS, this component should be one of the most easy to use component among all the zoomable, scrollable PhotoView alike views on react-native. 
+Written in pure JS, this component should be one of the most easy to use component among all the zoomable, scrollable PhotoView alike views on react-native.
 
 ## Install
 
- `npm install --save react-native-transformable-image@latest`
+ `npm install --save shoutem/react-native-transformable-image`
 
 
 
@@ -38,14 +38,14 @@ You can provide `enableTransform`, `enableScale` and `enableTranslate`  props to
 
 #### Other props
 
-* `onTransformGestureReleased` and `onViewTransformed`: 
+* `onTransformGestureReleased` and `onViewTransformed`:
 
-​	inherited from [react-native-view-transformer](https://github.com/ldn0x7dc/react-native-view-transformer)
+​	inherited from [react-native-view-transformer](https://github.com/shoutem/react-native-view-transformer)
 
 ### Attention
 
-* If you are using  react-native v0.27 and below, or if the image source is local (`source={require('...')}`), you should provide the **pixels** prop, like `pixels={{width: 3607, height: 2400}}` (ask your API server to provide the pixels info for remote images). This prop is used to align the edge of the image content with the view's boundry and to determine the max scale.
-* By default, the offical iOS Image component will downsample if the image is larger than the view size. `react-native-transformable-image` disables downsampling to keep more image details when zoomed in. This could cause memory issues if your image is too large.
+* If you are using  react-native v0.27 and below, or if the image source is local (`source={require('...')}`), you should provide the **pixels** prop, like `pixels={{width: 3607, height: 2400}}` (ask your API server to provide the pixels info for remote images). This prop is used to align the edge of the image content with the view's boundary and to determine the max scale.
+* By default, the official iOS Image component will downsample if the image is larger than the view size. `react-native-transformable-image` disables downsampling to keep more image details when zoomed in. This could cause memory issues if your image is too large.
 
 
 
