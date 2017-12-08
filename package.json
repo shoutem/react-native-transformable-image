@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ldn0x7dc/react-native-transformable-image#readme",
   "dependencies": {
-    "react-native-view-transformer": "shoutem/react-native-view-transformer#0156138efeeb0480485f7526399cfc597c49d7ac",
+    "react-native-view-transformer": "shoutem/react-native-view-transformer#v0.22.0",
     "prop-types": "^15.5.10"
   }
 }
