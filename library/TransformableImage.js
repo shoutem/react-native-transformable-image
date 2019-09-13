@@ -45,12 +45,18 @@ export default class TransformableImage extends Component {
       pixels: undefined,
       keyAcumulator: 1
     };
+
+    this.onLoadComplete = (width, height) => this.setState({pixels: {width, height}});
   }
 
   componentWillMount() {
     if (!this.props.pixels) {
       this.getImageSize(this.props.source);
     }
+  }
+
+  componentWillUnmount() {
+    this.onLoadComplete = undefined;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -151,7 +157,9 @@ export default class TransformableImage extends Component {
               if(this.state.pixels && this.state.pixels.width === width && this.state.pixels.height === height) {
                 //no need to update state
               } else {
-                this.setState({pixels: {width, height}});
+                if (typeof this.onLoadComplete === 'function') {
+                  this.onLoadComplete(width, height);
+                }
               }
             }
           },
